@@ -9,6 +9,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'bourbon'
+gem 'bitters'
+gem 'neat'
+gem 'refills'
+gem 'google-webfonts-rails'
+
 group :development, :test do
   gem 'fabrication'
   gem 'faker'
