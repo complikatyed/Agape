@@ -14,8 +14,8 @@ body {
   }
 
   .first_right {
-    @include span-columns(11);
-    @include shift(1);
+    @include span-columns(9);
+    @include shift(3);
     @include omega();
     padding-top: 2.25em;
   }
