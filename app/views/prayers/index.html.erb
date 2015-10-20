@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Prayer Request</th>
+    <th>Details</th>
+    <th>Posted By</th>
+  </tr>
+
+  <% @request.each do |request| %>
+    <tr>
+      <td><%= request.prayfor %></td>
+      <td><%= request.content %></td>
+      <td><%= request.postedby %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br>
+  <ul class="shifted">
+    <li class="plain"><%= link_to "Add a new prayer request", new_request_path %></li>
+  </ul>
+</div>

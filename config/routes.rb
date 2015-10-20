@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
 root 'welcome#index'
 
-resources :requests
+resources :prayers
 
 end

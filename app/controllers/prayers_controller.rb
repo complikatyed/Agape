@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+  before_filter :initialize_request
 
   def new
     @request = Request.new
@@ -14,12 +15,8 @@ class RequestsController < ApplicationController
     end
   end
 
-  def show
-    @request = Request.find_by_id(params[:id])
-  end
-
   def index
-    @request = Request.all
+    @requests = Requests.find(:all, :limit => 10, :order => 'date_posted')
   end
 
   protected

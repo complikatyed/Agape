@@ -1,0 +1,7 @@
+<%= simple_form_for prayer do |f| %>
+  <%= f.input :prayfor, placeholder: "Please pray for...", input_html: { class: 'prayer' }%>
+  <%= f.input :content, placeholder: "Prayer request details", input_html: { class: 'prayer' }  %>
+  <%= f.input :postedby, placeholder: "Your First Name", input_html: { class: 'prayer' }  %>
+  <% button_text = (prayer.persisted?) ? "Share Your Prayer Request" %>
+  <%= f.button :submit, button_text, class: 'prayer' %>
+<% end %>

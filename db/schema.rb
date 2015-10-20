@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020193108) do
+ActiveRecord::Schema.define(version: 20151020233042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "requests", force: :cascade do |t|
-    t.string   "prayfor"
+  create_table "prayers", force: :cascade do |t|
+    t.string   "title"
     t.string   "content"
     t.string   "postedby"
     t.datetime "created_at", null: false
