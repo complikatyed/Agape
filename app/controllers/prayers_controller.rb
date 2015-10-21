@@ -1,14 +1,14 @@
-class RequestsController < ApplicationController
-  before_filter :initialize_request
+class PrayersController < ApplicationController
+  # before_filter :initialize_prayer
 
   def new
-    @request = Request.new
+    @prayer = Prayer.new
   end
 
   def create
-    @request = Request.new(request_params)
-    if @request.save
-      redirect_to request_path(@request),
+    @prayer = Prayer.new(prayer_params)
+    if @prayer.save
+      redirect_to prayer_path(@prayer)
     else
       flash.alert = "Please fix the errors below to continue."
       render :new
@@ -16,24 +16,23 @@ class RequestsController < ApplicationController
   end
 
   def index
-    @requests = Requests.find(:all, :limit => 10, :order => 'date_posted')
   end
 
   protected
 
-  def initialize_request
+  def initialize_prayer
     if params[:id].present?
-      @request = Request.find(params[:id])
+      @prayer = Prayer.find(params[:id])
     else
-      @request = Request.new
+      @prayer = Prayer.new
     end
-    if params[:request].present?
-      @request.assign_attributes(request_params)
+    if params[:prayer].present?
+      @prayer.assign_attributes(prayer_params)
     end
   end
 
-  def request_params
-    params.require(:request).permit(:prayfor, :content, :postedby)
+  def prayer_params
+    params.require(:prayer).permit(:prayfor, :content, :postedby)
   end
 
 
