@@ -18,6 +18,10 @@ class PrayersController < ApplicationController
   def index
   end
 
+  def show
+    @prayer = Prayer.find_by_id(params[:id])
+  end
+
   protected
 
   def initialize_prayer
