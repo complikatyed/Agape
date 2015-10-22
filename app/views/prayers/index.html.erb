@@ -1,3 +1,14 @@
 <h1> This is the prayer request page </h1>
 
+<div>
+  <% @prayers.each do |prayer| %>
+    <div class="prayer_request">
+      Please pray for:&nbsp;&nbsp;<%= prayer.title %><br>
+      <%= prayer.content %><br>
+      Posted by:&nbsp;&nbsp;<%= prayer.postedby %>
+    </div>
+  <% end %>
+</div>
+
+
 <%= button_to "Add a new prayer request", new_prayer_path, :class => "button" "main", :method => :get %>

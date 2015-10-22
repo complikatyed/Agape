@@ -16,6 +16,7 @@ class PrayersController < ApplicationController
   end
 
   def index
+    @prayers = Prayer.all
   end
 
   def show
@@ -36,7 +37,7 @@ class PrayersController < ApplicationController
   end
 
   def prayer_params
-    params.require(:prayer).permit(:prayfor, :content, :postedby)
+    params.require(:prayer).permit(:title, :content, :postedby)
   end
 
 
