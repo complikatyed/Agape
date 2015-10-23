@@ -8,7 +8,7 @@ class PrayersController < ApplicationController
   def create
     @prayer = Prayer.new(prayer_params)
     if @prayer.save
-      redirect_to prayer_path(@prayer)
+      redirect_to prayers_path(@prayer)
     else
       flash.alert = "Please fix the errors below to continue."
       render :new
@@ -16,7 +16,7 @@ class PrayersController < ApplicationController
   end
 
   def index
-    @prayers = Prayer.all
+    @prayers = Prayer.recent_posts
   end
 
   def show
