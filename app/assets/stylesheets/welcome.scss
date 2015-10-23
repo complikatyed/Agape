@@ -1,6 +1,3 @@
-
-
-
 body {
   background-color: $welcome-background-color;
   color: white;
@@ -11,6 +8,16 @@ body {
   p {
     display: inline;
     font-size: 1.25em;
+    color: #001359;
+  }
+
+  a {
+    color: #001359;
+      &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
   }
 
   .first_right {
