@@ -9,8 +9,9 @@
 <div class="request_area">
   <% @prayers.each do |prayer| %>
     <div class="prayer_requests">
-      <strong><%= prayer.title %>:</strong>&nbsp;&nbsp;<%= prayer.content %><br>
-      <p class="posted_by">Posted by:&nbsp;&nbsp;<%= prayer.postedby %></p>
+      <strong><%= prayer.title %>:</strong>&nbsp;&nbsp;<%= prayer.content %>
+      <br>
+      <p class="posted_by"><%= prayer.postedby %>,&nbsp;&nbsp;<%= prayer.created_at.strftime("%m/%d/%Y at %I:%M%p") %> </p>
     </div>
   <% end %>
 </div>
