@@ -9,8 +9,7 @@
 <div class="request_area">
   <% @prayers.each do |prayer| %>
     <div class="prayer_requests">
-      PLEASE PRAY FOR<br>
-      <%= prayer.title %>:&nbsp;&nbsp;<%= prayer.content %><br>
+      <strong><%= prayer.title %>:</strong>&nbsp;&nbsp;<%= prayer.content %><br>
       <p class="posted_by">Posted by:&nbsp;&nbsp;<%= prayer.postedby %></p>
     </div>
   <% end %>
