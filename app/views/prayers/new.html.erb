@@ -1,3 +1,14 @@
-<h3>Please provide the information below:</h3>
 
-<%= render partial: 'prayers/form', locals: { prayer: @prayer } %>
+<div class="add_prayer">
+
+  <div class="add_prayer_left">
+    <%= image_tag("crossAndClouds.jpg", :alt => "large cross against dark sky with clouds") %>
+  </div>
+
+  <div class="add_prayer_right">
+    <h3>Please provide the information below:</h3>
+
+    <%= render partial: 'prayers/form', locals: { prayer: @prayer } %>
+  </div>
+
+</div>

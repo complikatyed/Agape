@@ -1,6 +1,6 @@
 <%= simple_form_for prayer do |f| %>
-  <%= f.input :title, placeholder: "Please pray for...", input_html: { class: 'prayer' }%>
-  <%= f.input :content, placeholder: "Prayer request details", input_html: { class: 'prayer' }  %>
-  <%= f.input :postedby, placeholder: "Your First Name", input_html: { class: 'prayer' }  %>
+  <%= f.input :title, label: false, placeholder: "Pray for...", input_html: { class: 'prayer' }%>
+  <%= f.input :content, as: :text, label: false, placeholder: "Prayer request details", input_html: { class: 'prayer', :rows => 10 } %>
+  <%= f.input :postedby, label: false, placeholder: "Your name", input_html: { class: 'prayer' } %>
   <%= f.button :submit, "Share Your Prayer Request", class: 'prayer' %>
 <% end %>

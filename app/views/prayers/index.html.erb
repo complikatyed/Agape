@@ -1,14 +1,17 @@
-<h1> This is the prayer request page </h1>
+<container class="top_image">
+  <%= image_tag("bladesOfGrass.jpg", :alt => "blades of grass") %>
+</container>
 
-<div>
+<div class="add_new">
+<%= button_to "Add a new prayer request", new_prayer_path, :class => "button" "main", :method => :get %>
+</div>
+
+<div class="request_area">
   <% @prayers.each do |prayer| %>
-    <div class="prayer_request">
-      Please pray for:&nbsp;&nbsp;<%= prayer.title %><br>
-      <%= prayer.content %><br>
-      Posted by:&nbsp;&nbsp;<%= prayer.postedby %>
+    <div class="prayer_requests">
+      PLEASE PRAY FOR<br>
+      <%= prayer.title %>:&nbsp;&nbsp;<%= prayer.content %><br>
+      <p class="posted_by">Posted by:&nbsp;&nbsp;<%= prayer.postedby %></p>
     </div>
   <% end %>
 </div>
-
-
-<%= button_to "Add a new prayer request", new_prayer_path, :class => "button" "main", :method => :get %>
