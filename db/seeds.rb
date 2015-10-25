@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 prayers = Prayer.create([{title: 'Me (David S.)', content: 'For confidence and peace.', postedby: 'David S.'}, {title: 'My family', content: 'We are looking for a new house for my parents.', postedby: 'Tamara L.'}])
+emails = Email.create([{name: 'Example Person)', address: 'person@example.com'}, {name: 'Second Person', address: 'second@example.com'}])

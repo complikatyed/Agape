@@ -1,0 +1,22 @@
+<div class="directory_main">
+
+  <div class="directory_header">
+     <h1>Email Directory</h1>
+
+    <%= image_tag("Typing.jpg", :alt => "Stuffed monkey using vintage typewriter") %>
+  </div>
+
+  <div class="directory_left">
+
+    <% @emails.each do |email| %>
+       <p> <%= email.name %>:&nbsp;&nbsp;<%= email.address %> </p>
+    <% end %>
+  </div>
+  
+   <div class="directory_right">
+    <%= button_to "Add or update email information", new_email_path, :class => "button" "main", :method => :get %>
+  </div>
+
+
+
+</div>

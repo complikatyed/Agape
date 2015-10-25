@@ -1,0 +1,26 @@
+.directory_main {
+  @include outer-container;
+
+  .directory_header {
+    img {
+      max-width: 200px;
+    }
+    h1 {
+      font-size: 5em;
+      display: inline;
+      text-align: middle;
+    }
+  }
+
+  .directory_left {
+    @include span-columns(8);
+    @include omega();
+    background-color: white;
+    color: $dark-blue;
+    }
+
+  .directory_right {
+    @include span-columns(4);
+    @include omega();
+    }
+}

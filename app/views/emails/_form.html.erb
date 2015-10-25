@@ -1,0 +1,5 @@
+<%= simple_form_for prayer do |f| %>
+  <%= f.input :name, label: false, placeholder: "Name", input_html: { class: 'email' }%>
+  <%= f.input :address, label: false, placeholder: "name@example.com", input_html: { class: 'email'} %>
+  <%= f.button :submit, "Add this email", class: 'email' %>
+<% end %>
