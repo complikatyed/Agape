@@ -1,22 +1,35 @@
 <div class="directory_main">
 
   <div class="directory_header">
-     <h1>Email Directory</h1>
 
-    <%= image_tag("Typing.jpg", :alt => "Stuffed monkey using vintage typewriter") %>
+    <div class="directory_header_left">
+      <%= image_tag("Typing.jpg", :alt => "Stuffed monkey using vintage typewriter") %>
+    </div>
+    <div class="directory_header_right">
+     <h1>Email Directory</h1>
+    </div>
+
   </div>
 
-  <div class="directory_left">
+
+  <div class="directory_right">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email Address</th>
+      </tr>
 
     <% @emails.each do |email| %>
-       <p> <%= email.name %>:&nbsp;&nbsp;<%= email.address %> </p>
+      <tr>
+        <td><%= email.name %></td>
+        <td><%= email.address %></td>
+      </tr>
     <% end %>
   </div>
-  
-   <div class="directory_right">
-    <%= button_to "Add or update email information", new_email_path, :class => "button" "main", :method => :get %>
-  </div>
-
-
 
 </div>
+
+<!-- <div class="directory_right">
+  <%= button_to "Add or update email information", new_email_path, :class => "button" "main", :method => :get %>
+</div> -->
+

@@ -3,24 +3,33 @@
 
   .directory_header {
     img {
-      max-width: 200px;
+      max-width: 300px;
     }
     h1 {
       font-size: 5em;
       display: inline;
       text-align: middle;
+      vertical-align: middle;
     }
-  }
 
-  .directory_left {
+    .directory_header_left {
+      @include span-columns(4);
+      padding-left: 20px;
+    }
+
+    .directory_header_right {
     @include span-columns(8);
     @include omega();
-    background-color: white;
-    color: $dark-blue;
+    padding: 60px 0px;
     }
 
+  }
+
   .directory_right {
-    @include span-columns(4);
-    @include omega();
-    }
+    @include span-columns(8);
+    @include shift(4);
+    padding: 10px;
+    background-color: white;
+    color: $dark-blue;
+  }
 }
