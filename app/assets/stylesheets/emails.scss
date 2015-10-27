@@ -1,35 +1,44 @@
-.directory_main {
+.directory_top {
   @include outer-container;
 
-  .directory_header {
-    img {
-      max-width: 300px;
-    }
-    h1 {
-      font-size: 5em;
-      display: inline;
-      text-align: middle;
-      vertical-align: middle;
-    }
+  max-width: 100%;
+  border-top: 2px solid white;
+  border-bottom: 3px solid white;
 
-    .directory_header_left {
-      @include span-columns(4);
-      padding-left: 20px;
-    }
-
-    .directory_header_right {
-    @include span-columns(8);
-    @include omega();
-    padding: 60px 0px;
-    }
-
+  img {
+    max-height: 200px;
+    display:block;
+    margin:auto;
   }
+
+  h1 {
+    font-size: 5em;
+    line-height: 198px;
+    margin: 0px;
+  }
+
+  .directory_top_left {
+    @include span-columns(4);
+  }
+
+  .directory_top_right {
+  @include span-columns(8);
+  @include omega();
+  }
+
+
+}
+
+.directory_bottom {
+  @include outer-container;
 
   .directory_right {
     @include span-columns(8);
     @include shift(4);
+    margin-top: 20px;
     padding: 10px;
     background-color: white;
     color: $dark-blue;
   }
+
 }
