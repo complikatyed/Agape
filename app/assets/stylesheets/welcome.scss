@@ -6,6 +6,7 @@ body {
 
 .outer_links {
   @include outer-container;
+  
   p {
     display: inline;
     font-size: 2em;
