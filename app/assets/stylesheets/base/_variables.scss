@@ -1,6 +1,6 @@
 // Typography
-$base-font-family: 'Muli', sans-serif;
-$heading-font-family: 'Merriweather', sans-serif;
+$base-font-family: 'Cabin', sans-serif;
+$heading-font-family: 'Merriweather', serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -18,13 +18,16 @@ $base-z-index: 0;
 // Colors
 $blue: #477dca;
 $dark-blue: #001359;
+$teal: #107972;
+$dark-teal: #02302D;
+$light-teal: #61B098;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $light-teal;
 
 // Border
 $base-border-color: $light-gray;
