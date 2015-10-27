@@ -2,9 +2,14 @@
 @import "neat";
 @import "base/grid-settings";
 @import "base/base";
-@import url(https://fonts.googleapis.com/css?family=Muli|Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Merriweather:900);
 @import "welcome";
 @import "_hero";
 @import "_header";
 @import "prayers";
 @import "emails";
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
