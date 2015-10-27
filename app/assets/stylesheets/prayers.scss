@@ -1,38 +1,37 @@
-// Place all the styles related to the Prayers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.top_image{
+.top_image {
   img {
-    max-width: 100%;
-    margin-left: auto;
-    border: 1px solid white;
+    padding: 2px 0px 5px 0px;
+    border-bottom: 1.5px solid white;
   }
 }
 
 .add_new {
-  padding: 20px;
-}
-
-.requests_area {
-  margin-top: 30px;
+  @include span-columns(9);
+  @include shift(1.5);
+  margin-top: 25px;
 }
 
 .prayer_requests {
+  @include span-columns(9);
+  @include shift(1.5);
+  padding: 15px;
+  padding-bottom: 30px;
+  margin-top: 25px;
   border-radius: 5px;
   max-width: 75%;
-  background-color: #F1F8F7
-  ;
+  background-color: #F1F8F7;
   color: $dark-blue;
-  padding: 15px;
-  padding-bottom: 20px;
-  margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
 
+  .request_content {
+    color: $dark-gray;
+  }
   .posted_by {
     float: right;
-    margin-top: -5px;
+    padding: 5px;
+  }
+
+  .bold {
+    font-weight: 700;
   }
 }
 
@@ -59,15 +58,9 @@
     margin-top: 10px;
     margin-left: 10px;
     }
+  }
 }
 
-
-
-
-
-
-
-}
 
 
 

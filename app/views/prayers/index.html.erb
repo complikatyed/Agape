@@ -1,17 +1,16 @@
-<container class="top_image">
+<div class="top_image">
   <%= image_tag("bladesOfGrass.jpg", :alt => "blades of grass") %>
-</container>
-
-<div class="add_new">
-<%= button_to "Add a new prayer request", new_prayer_path, :class => "button" "main", :method => :get %>
 </div>
-
 <div class="request_area">
   <% @prayers.each do |prayer| %>
     <div class="prayer_requests">
-      <u><%= prayer.title %>:</u>&nbsp;&nbsp;<%= prayer.content %>
-      <br>
-      <p class="posted_by"><%= prayer.postedby %>,&nbsp;&nbsp;<%= prayer.created_at.strftime("%m/%d/%Y") %> </p>
+    <span class="bold"><%= prayer.title %>:</span>&nbsp;&nbsp;<span class="request_content"><%= prayer.content %></span>
+    <br>
+    <span class="posted_by"><%= prayer.postedby %>,&nbsp;&nbsp;<%= prayer.created_at.strftime("%m/%d/%Y") %> </span>
     </div>
   <% end %>
+</div>
+
+<div class="add_new">
+<%= button_to "Add a new prayer request", new_prayer_path, :class => "button" "main", :method => :get %>
 </div>
