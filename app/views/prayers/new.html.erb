@@ -2,11 +2,11 @@
 <div class="add_prayer">
 
   <div class="add_prayer_left">
-    <%= image_tag("crossAndClouds.jpg", :alt => "large cross against dark sky with clouds") %>
+    <%= image_tag("crossAndClouds1.jpg", :alt => "large cross against dark sky with clouds") %>
   </div>
 
   <div class="add_prayer_right">
-    <h2>Please type your prayer request information below:</h2>
+    <span class="prayer_request_add">Please type your prayer request information below:</span>
 
     <%= render partial: 'prayers/form', locals: { prayer: @prayer } %>
   </div>
