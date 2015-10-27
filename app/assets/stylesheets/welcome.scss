@@ -1,63 +1,40 @@
 body {
   background-color: $welcome-background-color;
   color: white;
-  
+
 }
 
-.links {
+.outer_links {
   @include outer-container;
   p {
     display: inline;
-    font-size: 1.25em;
-    color: #001359;
+    font-size: 2em;
+    color: white;
+    line-height: 3em;
   }
 
   a {
-    color: #001359;
+    color: white;
       &:hover,
-  &:focus {
-    background-color: shade($action-color, 20%);
-    color: #fff;
-  }
+      &:focus {
+    background-color: $welcome-background-color;
+    color: #001359;
+    }
   }
 
-  .first_right {
-    @include span-columns(9);
-    @include shift(3);
-    @include omega();
-    padding-top: 2.25em;
-  }
-  .second_right {
+  .links {
     @include span-columns(10);
-    @include shift(2);
-    @include omega();
-    padding-top: 2.25em;
-  }
-  .third_right {
-    @include span-columns(9);
-    @include shift(3);
-    @include omega();
-    padding-top: 2.25em;
-  }
-  .fourth_right {
-    @include span-columns(8);
-    @include shift(4);
-    @include omega();
-    padding-top: 2.25em;
-  }
-  .fifth_right {
-    @include span-columns(7);
-    @include shift(5);
-    @include omega();
-    padding-top: 2.25em;
-  }
-  .sixth_right {
-    @include span-columns(6);
-    @include shift(6);
-    @include omega();
-    padding-top: 2.25em;
+    @include shift(2.5);
+
+    .links_left,
+    .links_right {
+      @include span-columns(4);
+      padding-top: 2.5em;
+      text-align: center;
+    }
   }
 }
+
 
 .help-text {
   max-width: 50%;
