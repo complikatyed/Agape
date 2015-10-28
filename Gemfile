@@ -16,9 +16,12 @@ gem 'refills'
 gem 'google-webfonts-rails'
 
 group :development, :test do
+  gem 'byebug'
   gem 'fabrication'
   gem 'faker'
+  gem 'launchy'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
@@ -26,7 +29,6 @@ end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'launchy'
-  gem 'shoulda-matchers'
+
 end
 
