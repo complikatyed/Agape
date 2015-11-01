@@ -1,5 +1,9 @@
 <header class="header">
   <nav>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash#{name}" %>
+    <% end %>
+
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Home",    root_path %></li>
       <li><%= link_to "Help",    help_path %></li>
